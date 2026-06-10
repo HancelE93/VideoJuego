@@ -1,0 +1,98 @@
+.contenedor{
+  padding:30px;
+  min-height:100vh;
+  background:#0f172a;
+  font-family:'Segoe UI',sans-serif;
+}
+
+.contenedor h1{
+  text-align:center;
+  color:white;
+  margin-bottom:25px;
+}
+
+.tabla-contenedor{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.tabla{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.tabla thead{
+  background:linear-gradient(
+    90deg,
+    #2563eb,
+    #3b82f6
+  );
+}
+
+.tabla th{
+  color:white;
+  padding:15px;
+}
+
+.tabla td{
+  padding:15px;
+  text-align:center;
+}
+
+.tabla tbody tr:nth-child(even){
+  background:#f8fafc;
+}
+
+.tabla tbody tr:hover{
+  background:#dbeafe;
+}
+
+.precio{
+  color:#16a34a;
+  font-weight:bold;
+}
+
+.tag{
+  background:#e0e7ff;
+  color:#3730a3;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:13px;
+}
+
+.estado{
+  padding:6px 12px;
+  border-radius:20px;
+  color:white;
+  font-weight:bold;
+}
+
+.disponible{
+  background:#22c55e;
+}
+
+.agotado{
+  background:#ef4444;
+}
+
+progress{
+  width:120px;
+  height:18px;
+}
+
+.porcentaje{
+  margin-left:8px;
+  font-weight:bold;
+}
+
+@media(max-width:768px){
+  .tabla-contenedor{
+    overflow-x:auto;
+  }
+
+  .tabla{
+    min-width:800px;
+  }
+}
