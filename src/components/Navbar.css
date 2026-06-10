@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 32px;
+
+  background: linear-gradient(135deg, #0b0f19, #111827);
+  color: #fff;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.link {
+  text-decoration: none;
+  color: #cbd5e1;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Hover elegante */
+.link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* Botón principal */
+.primary {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0b0f19;
+  font-weight: 700;
+
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+}
+
+.primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Efecto activo opcional (si luego lo usas con useLocation) */
+.active {
+  border-bottom: 2px solid #38bdf8;
+}

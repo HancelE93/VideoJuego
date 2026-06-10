@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.form-container {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 28px;
+
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  animation: fadeIn 0.5s ease;
+}
+
+/* título */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+/* labels */
+.form-container label {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+/* inputs */
+.form-container input {
+  width: 100%;
+  padding: 10px 12px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+  color: white;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56,189,248,0.3);
+}
+
+/* checkbox */
+.form-container input[type="checkbox"] {
+  width: auto;
+  margin-left: 10px;
+  transform: scale(1.2);
+}
+
+/* botones */
+.form-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/* guardar */
+.form-container button:first-of-type {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.form-container button:first-of-type:hover {
+  transform: translateY(-2px);
+}
+
+/* cancelar */
+.form-container button:last-of-type {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.form-container button:last-of-type:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

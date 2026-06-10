@@ -1,98 +1,125 @@
-.contenedor{
-  padding:30px;
-  min-height:100vh;
-  background:#0f172a;
-  font-family:'Segoe UI',sans-serif;
+.contenedor {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  min-height: 100vh;
 }
 
-.contenedor h1{
-  text-align:center;
-  color:white;
-  margin-bottom:25px;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-.tabla-contenedor{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
+.tabla-contenedor {
+  overflow-x: auto;
 }
 
-.tabla{
-  width:100%;
-  border-collapse:collapse;
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-.tabla thead{
-  background:linear-gradient(
-    90deg,
-    #2563eb,
-    #3b82f6
-  );
+.tabla thead {
+  background: #1f2937;
+  color: white;
 }
 
-.tabla th{
-  color:white;
-  padding:15px;
+.tabla th,
+.tabla td {
+  padding: 12px;
+  text-align: center;
 }
 
-.tabla td{
-  padding:15px;
-  text-align:center;
+.tabla tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
 }
 
-.tabla tbody tr:nth-child(even){
-  background:#f8fafc;
+.tabla tbody tr:hover {
+  background: #f1f5f9;
 }
 
-.tabla tbody tr:hover{
-  background:#dbeafe;
+/* PORTADA */
+.portada {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
 }
 
-.precio{
-  color:#16a34a;
-  font-weight:bold;
+.portada:hover {
+  transform: scale(1.15);
 }
 
-.tag{
-  background:#e0e7ff;
-  color:#3730a3;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:13px;
+/* TAG */
+.tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
 }
 
-.estado{
-  padding:6px 12px;
-  border-radius:20px;
-  color:white;
-  font-weight:bold;
+/* PRECIO */
+.precio {
+  font-weight: bold;
+  color: #16a34a;
 }
 
-.disponible{
-  background:#22c55e;
+/* ESTADO */
+.estado {
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
 }
 
-.agotado{
-  background:#ef4444;
+.disponible {
+  background: #22c55e;
 }
 
-progress{
-  width:120px;
-  height:18px;
+.agotado {
+  background: #ef4444;
 }
 
-.porcentaje{
-  margin-left:8px;
-  font-weight:bold;
+/* PROGRESO */
+.porcentaje {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #555;
 }
 
-@media(max-width:768px){
-  .tabla-contenedor{
-    overflow-x:auto;
-  }
+/* BOTONES */
+.btn-editar {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+}
 
-  .tabla{
-    min-width:800px;
-  }
+.btn-editar:hover {
+  background: #2563eb;
+}
+
+.btn-eliminar {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
 }
