@@ -65,30 +65,6 @@ src/
 
 ---
 
-## 📸 Evidencias del Taller
-
-### Captura 1
-
-Código de `App.jsx` mostrando:
-
-* Importaciones.
-* Datos de videojuegos.
-* Renderización del componente `TablaVideojuegos`.
-
-### Captura 2
-
-Aplicación ejecutándose en el navegador mostrando:
-
-* Tabla de videojuegos.
-* Barra de progreso.
-* Diseño responsivo.
-
-### Captura 3
-
-Documentación oficial del elemento `<progress>` consultada en React.
-
----
-
 ## 🚀 Instalación
 
 Clonar el repositorio:
