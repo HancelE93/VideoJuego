@@ -1,113 +1,137 @@
-# 🎮 Tienda de Videojuegos - React
+# 🎮 Tienda de Videojuegos - SPA con React Router
 
-## 📖 Descripción
+## 📌 Descripción del proyecto
 
-Este proyecto fue desarrollado como parte del taller **"Renderizado de Listas y Uso de Props"** utilizando React y Vite.
+Este proyecto fue desarrollado como parte del taller “Formularios y Navegación SPA (Single Page Application)”, utilizando React + Vite + React Router DOM.
 
-La aplicación permite visualizar un catálogo de videojuegos mediante una tabla dinámica que consume datos ficticios (Mock Data). Los datos son enviados desde el componente principal hacia un componente de presentación utilizando **Props**, aplicando conceptos fundamentales de React.
+La aplicación simula una tienda de videojuegos donde se puede gestionar un inventario completo mediante operaciones CRUD:
 
-Además, se implementó una interfaz responsiva que se adapta correctamente a dispositivos móviles y de escritorio.
+- ➕ Crear videojuegos
+- ✏️ Editar videojuegos
+- ❌ Eliminar videojuegos
+- 📋 Listar videojuegos
 
----
-
-## 🎯 Objetivos del Taller
-
-* Practicar el uso de listas en React mediante `.map()`.
-* Comprender el flujo de datos utilizando **Props**.
-* Crear componentes reutilizables.
-* Implementar una tabla responsiva utilizando CSS.
-* Mostrar información dinámica de videojuegos.
-* Utilizar el elemento `<progress>` para representar el progreso de descarga.
+Toda la lógica del estado se maneja de forma centralizada en App.jsx.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🚀 Tecnologías utilizadas
 
-* React
-* Vite
-* JavaScript
-* HTML5
-* CSS3
+- React
+- Vite
+- React Router DOM
+- CSS
+- Hooks: useState, useLocation, useNavigate
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura del proyecto
 
-```text
 src/
-│
 ├── components/
+│   ├── Navbar.jsx
+│   ├── Navbar.css
+│   ├── FormularioVideojuego.jsx
 │   ├── TablaVideojuegos.jsx
-│   └── TablaVideojuegos.css
-│
-├── data/
-│   └── videojuegos.js
+│   └── PaginaNoEncontrada.jsx
 │
 ├── App.jsx
-└── main.jsx
-```
+├── main.jsx
+└── App.css
 
 ---
 
-## 🎮 Funcionalidades
+## ⚙️ Instalación del proyecto
 
-✅ Visualización de videojuegos en formato tabla.
+Clona el repositorio:
 
-✅ Renderizado dinámico mediante `.map()`.
-
-✅ Comunicación entre componentes usando Props.
-
-✅ Indicador visual de progreso de descarga.
-
-✅ Diseño adaptable para dispositivos móviles.
-
-✅ Estilos modernos y responsivos.
-
----
-
-## 🚀 Instalación
-
-Clonar el repositorio:
-
-```bash
 git clone https://github.com/tu-usuario/tienda-videojuegos.git
-```
 
-Ingresar al proyecto:
+Entra a la carpeta:
 
-```bash
 cd tienda-videojuegos
-```
 
-Instalar dependencias:
+Instala dependencias:
 
-```bash
 npm install
-```
 
-Ejecutar el proyecto:
+Instala React Router DOM:
 
-```bash
+npm install react-router-dom
+
+Ejecuta el proyecto:
+
 npm run dev
-```
 
 ---
 
-## 💡 Aprendizajes Obtenidos
+## 🧠 Funcionalidades
 
-Durante el desarrollo de este taller se reforzaron conocimientos relacionados con:
+📋 Listar videojuegos
+- Muestra todos los videojuegos en una tabla
+- Datos manejados con estado (useState)
 
-* Componentes funcionales.
-* Props.
-* Renderizado de listas.
-* Manejo de datos estáticos.
-* Diseño responsivo.
-* Organización de proyectos React.
+➕ Crear videojuego
+- Formulario con inputs (text, select, checkbox)
+- Permite agregar nuevos videojuegos
+
+✏️ Editar videojuego
+- Precarga datos en el formulario
+- Permite modificar y guardar cambios
+
+❌ Eliminar videojuego
+- Elimina registros de la tabla en tiempo real
+
+🌐 Navegación SPA (React Router DOM)
+
+Rutas:
+- / → Lista de videojuegos
+- /nuevo → Crear videojuego
+- /editar/:id → Editar videojuego
+- * → Página 404
+
+---
+
+## 🧭 Navegación
+
+Incluye un Navbar para moverse entre páginas sin recargar la página.
+
+---
+
+## 📸 Evidencias del proyecto
+
+Debes incluir estas capturas:
+
+- Formulario con inputs (text, select, checkbox)
+- Página principal con lista de videojuegos
+- Formulario de edición funcionando
+- Página 404
+
+---
+
+## 🧪 Flujo del sistema
+
+1. Crear videojuego
+2. Verlo en la tabla
+3. Editarlo
+4. Guardar cambios
+5. Eliminar si es necesario
 
 ---
 
 ## 👨‍💻 Autor
 
-**Hancel Espin**
+Hancel Espin  
+Proyecto académico - React SPA CRUD  
+Ecuador
 
-Proyecto académico desarrollado con React + Vite.
+---
+
+## ⭐ Nota
+
+Este proyecto fue desarrollado para practicar:
+
+- React Router DOM
+- CRUD en React
+- Manejo de estado con useState
+- SPA sin recargar la página
