@@ -45,7 +45,7 @@ src/
 
 Clona el repositorio:
 
-git clone https://github.com/tu-usuario/tienda-videojuegos.git
+git clone https://github.com/HancelE93/VideoJuego.git 
 
 Entra a la carpeta:
 
@@ -98,16 +98,7 @@ Incluye un Navbar para moverse entre páginas sin recargar la página.
 
 ---
 
-## 📸 Evidencias del proyecto
 
-Debes incluir estas capturas:
-
-- Formulario con inputs (text, select, checkbox)
-- Página principal con lista de videojuegos
-- Formulario de edición funcionando
-- Página 404
-
----
 
 ## 🧪 Flujo del sistema
 
