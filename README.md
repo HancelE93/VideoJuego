@@ -1,128 +1,155 @@
-# 🎮 Tienda de Videojuegos - SPA con React Router
+# 🎮 Tienda de Videojuegos SPA
 
-## 📌 Descripción del proyecto
+## 📖 Descripción
 
-Este proyecto fue desarrollado como parte del taller “Formularios y Navegación SPA (Single Page Application)”, utilizando React + Vite + React Router DOM.
+Proyecto desarrollado con React y Vite como parte del taller **"Formularios Avanzados, Validaciones y Persistencia Local en SPA"**.
 
-La aplicación simula una tienda de videojuegos donde se puede gestionar un inventario completo mediante operaciones CRUD:
-
-- ➕ Crear videojuegos
-- ✏️ Editar videojuegos
-- ❌ Eliminar videojuegos
-- 📋 Listar videojuegos
-
-Toda la lógica del estado se maneja de forma centralizada en App.jsx.
+La aplicación permite administrar un catálogo de videojuegos mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar), incorporando validaciones dinámicas, persistencia de datos con LocalStorage y una interfaz moderna optimizada mediante técnicas de UX/UI.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## 🚀 Funcionalidades Implementadas
 
-- React
-- Vite
-- React Router DOM
-- CSS
-- Hooks: useState, useLocation, useNavigate
+### 📋 Gestión de Videojuegos
+
+* Visualización de videojuegos en una tabla interactiva.
+* Registro de nuevos videojuegos.
+* Edición de videojuegos existentes.
+* Eliminación de registros.
+* Navegación SPA mediante React Router.
+
+### 📝 Formulario Avanzado
+
+Cada videojuego almacena:
+
+* 🎮 Título
+* 🏷️ Género
+* 💻 Plataforma
+* 💰 Precio
+* 📅 Fecha de lanzamiento
+* ⭐ Calificación de la crítica
+* 📝 Sinopsis
+* 📦 Disponibilidad
+* 📊 Progreso completado
+* 🖼️ Imagen de portada
+
+### 🔒 Validaciones Dinámicas
+
+El sistema valida automáticamente:
+
+* El título no puede estar vacío.
+* La sinopsis debe contener mínimo 10 caracteres.
+* La calificación debe estar entre 1 y 100.
+* No se permiten fechas futuras.
+* Mensajes de error visuales en tiempo real.
+
+### 💾 Persistencia con LocalStorage
+
+Los videojuegos se almacenan automáticamente en el navegador utilizando LocalStorage.
+
+Beneficios:
+
+* Conserva los datos después de recargar la página.
+* Mantiene los cambios realizados por el usuario.
+* Simula persistencia sin necesidad de una base de datos.
+
+### 🔔 Sistema de Notificaciones
+
+Implementación de Toast Notifications para informar acciones exitosas:
+
+* Videojuego agregado.
+* Videojuego actualizado.
+* Videojuego eliminado.
+
+Las alertas desaparecen automáticamente después de 3 segundos.
+
+### 🎨 Diseño Moderno
+
+Se aplicaron mejoras visuales utilizando recomendaciones de Inteligencia Artificial:
+
+* Interfaz responsiva.
+* Inputs con efectos de enfoque (focus).
+* Formularios modernos con bordes suaves.
+* Tabla estilizada.
+* Mensajes de error animados.
+* Experiencia de usuario mejorada.
 
 ---
 
-## 📂 Estructura del proyecto
+## 🛠️ Tecnologías Utilizadas
 
+* React
+* Vite
+* React Router DOM
+* JavaScript ES6+
+* CSS3
+* LocalStorage API
+
+---
+
+## 📂 Estructura del Proyecto
+
+```bash
 src/
+│
 ├── components/
 │   ├── Navbar.jsx
-│   ├── Navbar.css
-│   ├── FormularioVideojuego.jsx
 │   ├── TablaVideojuegos.jsx
+│   ├── FormularioVideojuego.jsx
+│   ├── AlertaNotificacion.jsx
 │   └── PaginaNoEncontrada.jsx
 │
+├── data/
+│   └── videojuegos.js
+│
 ├── App.jsx
-├── main.jsx
-└── App.css
+└── main.jsx
+```
 
 ---
 
-## ⚙️ Instalación del proyecto
+## ▶️ Instalación y Ejecución
 
-Clona el repositorio:
+Clonar el repositorio:
 
-git clone https://github.com/HancelE93/VideoJuego.git 
+```bash
+git clone URL_DEL_REPOSITORIO
+```
 
-Entra a la carpeta:
+Ingresar al proyecto:
 
+```bash
 cd tienda-videojuegos
+```
 
-Instala dependencias:
+Instalar dependencias:
 
+```bash
 npm install
+```
 
-Instala React Router DOM:
+Ejecutar el proyecto:
 
-npm install react-router-dom
-
-Ejecuta el proyecto:
-
+```bash
 npm run dev
+```
 
 ---
 
-## 🧠 Funcionalidades
+## 📸 Evidencias del Taller
 
-📋 Listar videojuegos
-- Muestra todos los videojuegos en una tabla
-- Datos manejados con estado (useState)
-
-➕ Crear videojuego
-- Formulario con inputs (text, select, checkbox)
-- Permite agregar nuevos videojuegos
-
-✏️ Editar videojuego
-- Precarga datos en el formulario
-- Permite modificar y guardar cambios
-
-❌ Eliminar videojuego
-- Elimina registros de la tabla en tiempo real
-
-🌐 Navegación SPA (React Router DOM)
-
-Rutas:
-- / → Lista de videojuegos
-- /nuevo → Crear videojuego
-- /editar/:id → Editar videojuego
-- * → Página 404
-
----
-
-## 🧭 Navegación
-
-Incluye un Navbar para moverse entre páginas sin recargar la página.
-
----
-
-
-
-## 🧪 Flujo del sistema
-
-1. Crear videojuego
-2. Verlo en la tabla
-3. Editarlo
-4. Guardar cambios
-5. Eliminar si es necesario
+* Validaciones dinámicas en formularios.
+* Persistencia de datos con LocalStorage.
+* Alertas Toast de éxito.
+* Diseño optimizado mediante IA.
+* Navegación SPA con React Router.
 
 ---
 
 ## 👨‍💻 Autor
 
-Hancel Espin  
-Proyecto académico - React SPA CRUD  
-Ecuador
+**Hancel Espin**
 
----
+Estudiante de Desarrollo de Software.
 
-## ⭐ Nota
-
-Este proyecto fue desarrollado para practicar:
-
-- React Router DOM
-- CRUD en React
-- Manejo de estado con useState
-- SPA sin recargar la página
+Proyecto académico desarrollado utilizando React, Vite y técnicas modernas de desarrollo Frontend.

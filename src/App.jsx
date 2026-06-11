@@ -5,26 +5,39 @@ import Navbar from './components/Navbar'
 import TablaVideojuegos from './components/TablaVideojuegos'
 import FormularioVideojuego from './components/FormularioVideojuego'
 import PaginaNoEncontrada from './components/PaginaNoEncontrada'
+import AlertaNotificacion from './components/AlertaNotificacion'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
+  // 🔥 CARGAR DIRECTAMENTE DESDE data.js
   const [videojuegos, setVideojuegos] = useState(data)
+
+  const [mensaje, setMensaje] = useState("")
+
+  function mostrarMensaje(texto) {
+    setMensaje(texto)
+    setTimeout(() => setMensaje(""), 3000)
+  }
 
   function agregarVideojuego(nuevo) {
     setVideojuegos([...videojuegos, nuevo])
+    mostrarMensaje("🎉 Videojuego agregado correctamente")
   }
 
   function eliminarVideojuego(id) {
     const filtrado = videojuegos.filter((v) => v.id !== id)
     setVideojuegos(filtrado)
+    mostrarMensaje("🗑 Videojuego eliminado")
   }
 
   function editarVideojuego(editado) {
     const actualizados = videojuegos.map((v) =>
       v.id === editado.id ? editado : v
     )
+
     setVideojuegos(actualizados)
+    mostrarMensaje("✏️ Videojuego actualizado")
   }
 
   function manejarGuardar(videojuego) {
@@ -41,7 +54,15 @@ function App() {
     <BrowserRouter>
       <Navbar />
 
+      {mensaje && (
+        <AlertaNotificacion
+          mensaje={mensaje}
+          onClose={() => setMensaje("")}
+        />
+      )}
+
       <Routes>
+
         <Route
           path="/"
           element={
@@ -70,11 +91,11 @@ function App() {
           }
         />
 
-        {/* 404 */}
         <Route
           path="*"
           element={<PaginaNoEncontrada />}
         />
+
       </Routes>
     </BrowserRouter>
   )

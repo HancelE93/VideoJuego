@@ -8,8 +8,11 @@ const data = [
         precio: 59.99,
         disponible: true,
         progreso: 0.85,
-        imagen: "https://novicompu.vtexassets.com/arquivos/ids/167472/1VSM18.png?v=638206296650870000"
-   },
+        imagen: "https://novicompu.vtexassets.com/arquivos/ids/167472/1VSM18.png?v=638206296650870000",
+        sinopsis: "Explora un mundo abierto lleno de aventuras y puzzles.",
+        fecha: "2023-05-12",
+        calificacion: 96
+    },
     {
         id: 2,
         titulo: "God of War Ragnarok",
@@ -19,7 +22,10 @@ const data = [
         precio: 49.99,
         disponible: true,
         progreso: 0.60,
-        imagen: "https://assetsio.gnwcdn.com/god-war-ragnarok-2799417.png?width=690&quality=85&format=jpg&dpr=1.5&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/god-war-ragnarok-2799417.png?width=690&quality=85&format=jpg&dpr=1.5&auto=webp",
+        sinopsis: "Kratos y Atreus enfrentan el fin del mundo nórdico.",
+        fecha: "2022-11-09",
+        calificacion: 94
     },
     {
         id: 3,
@@ -30,7 +36,10 @@ const data = [
         precio: 29.99,
         disponible: false,
         progreso: 1,
-        imagen: "https://assetsio.gnwcdn.com/coa77e.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/coa77e.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp",
+        sinopsis: "Construye y sobrevive en un mundo de bloques infinito.",
+        fecha: "2011-11-18",
+        calificacion: 93
     },
     {
         id: 4,
@@ -41,7 +50,10 @@ const data = [
         precio: 39.99,
         disponible: true,
         progreso: 0.75,
-        imagen: "https://assetsio.gnwcdn.com/co2lbd_CTj4N4p.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/co2lbd_CTj4N4p.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp",
+        sinopsis: "Historia criminal en un mundo abierto lleno de acción.",
+        fecha: "2013-09-17",
+        calificacion: 97
     },
     {
         id: 5,
@@ -52,7 +64,10 @@ const data = [
         precio: 69.99,
         disponible: true,
         progreso: 0.40,
-        imagen: "https://assetsio.gnwcdn.com/eafc25.png?width=690&quality=85&format=jpg&dpr=1.5&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/eafc25.png?width=690&quality=85&format=jpg&dpr=1.5&auto=webp",
+        sinopsis: "Simulación de fútbol con equipos y ligas reales.",
+        fecha: "2025-09-20",
+        calificacion: 82
     },
     {
         id: 6,
@@ -63,7 +78,10 @@ const data = [
         precio: 59.99,
         disponible: true,
         progreso: 0.95,
-        imagen: "https://assetsio.gnwcdn.com/elden-ring-walkthrough-8042-1647018411119.jpg?width=690&quality=85&format=jpg&dpr=1.5&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/elden-ring-walkthrough-8042-1647018411119.jpg?width=690&quality=85&format=jpg&auto=webp",
+        sinopsis: "Un RPG desafiante en un mundo oscuro y abierto.",
+        fecha: "2022-02-25",
+        calificacion: 95
     },
     {
         id: 7,
@@ -74,7 +92,10 @@ const data = [
         precio: 0,
         disponible: true,
         progreso: 0.20,
-        imagen: "https://assetsio.gnwcdn.com/chrome_ixMwP2CrsQ.jpg?width=690&quality=85&format=jpg&dpr=1.5&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/chrome_ixMwP2CrsQ.jpg?width=690&quality=85&format=jpg&auto=webp",
+        sinopsis: "Battle royale multijugador con construcción y acción.",
+        fecha: "2017-07-21",
+        calificacion: 80
     },
     {
         id: 8,
@@ -85,7 +106,10 @@ const data = [
         precio: 49.99,
         disponible: true,
         progreso: 0.65,
-        imagen: "https://assetsio.gnwcdn.com/red-dead-redemption-2-guida-trucchi-soluzione-consigli-1540470860066.jpg?width=690&quality=85&format=jpg&dpr=1.5&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/red-dead-redemption-2-guida-trucchi-soluzione-consigli-1540470860066.jpg?width=690&quality=85&format=jpg&auto=webp",
+        sinopsis: "Historia del viejo oeste con mundo abierto realista.",
+        fecha: "2018-10-26",
+        calificacion: 97
     },
     {
         id: 9,
@@ -96,7 +120,10 @@ const data = [
         precio: 44.99,
         disponible: false,
         progreso: 0.50,
-        imagen: "https://assetsio.gnwcdn.com/co7566.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/co7566.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp",
+        sinopsis: "Mundo futurista con decisiones y narrativa profunda.",
+        fecha: "2020-12-10",
+        calificacion: 85
     },
     {
         id: 10,
@@ -107,7 +134,10 @@ const data = [
         precio: 0,
         disponible: true,
         progreso: 0.30,
-        imagen: "https://assetsio.gnwcdn.com/coa8id.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp"
+        imagen: "https://assetsio.gnwcdn.com/coa8id.jpg?width=2234&height=1260&fit=bounds&quality=85&format=jpg&auto=webp",
+        sinopsis: "Shooter battle royale con acción intensa online.",
+        fecha: "2020-03-10",
+        calificacion: 83
     }
 ];
 

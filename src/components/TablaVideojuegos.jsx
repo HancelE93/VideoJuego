@@ -2,7 +2,6 @@ import "./TablaVideojuegos.css";
 import { useNavigate } from "react-router-dom";
 
 function TablaVideojuegos({ videojuegos, onEliminar }) {
-
   const navigate = useNavigate();
 
   function manejarEditar(juego) {
@@ -23,8 +22,11 @@ function TablaVideojuegos({ videojuegos, onEliminar }) {
               <th>Género</th>
               <th>Plataforma</th>
               <th>Precio</th>
+              <th>Fecha</th>
+              <th>Calificación</th>
               <th>Disponible</th>
               <th>Progreso</th>
+              <th>Sinopsis</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -33,10 +35,10 @@ function TablaVideojuegos({ videojuegos, onEliminar }) {
             {videojuegos?.map((juego) => (
               <tr key={juego.id}>
 
-                {/* PORTADA */}
+                {/* 🖼️ PORTADA */}
                 <td>
                   <img
-                    src={juego.imagen}
+                    src={juego.imagen || "https://via.placeholder.com/60"}
                     alt={juego.titulo}
                     className="portada"
                   />
@@ -54,6 +56,21 @@ function TablaVideojuegos({ videojuegos, onEliminar }) {
                   ${juego.precio}
                 </td>
 
+                {/* 📅 FECHA */}
+                <td>
+                  {juego.fecha
+                    ? new Date(juego.fecha).toLocaleDateString()
+                    : "Sin fecha"}
+                </td>
+
+                {/* 🔢 CALIFICACIÓN */}
+                <td>
+                  {juego.calificacion
+                    ? `${juego.calificacion}/100`
+                    : "N/A"}
+                </td>
+
+                {/* 📌 DISPONIBLE */}
                 <td>
                   <span className={
                     juego.disponible
@@ -64,6 +81,7 @@ function TablaVideojuegos({ videojuegos, onEliminar }) {
                   </span>
                 </td>
 
+                {/* 📊 PROGRESO */}
                 <td>
                   <progress value={juego.progreso} max="1" />
                   <span className="porcentaje">
@@ -71,6 +89,16 @@ function TablaVideojuegos({ videojuegos, onEliminar }) {
                   </span>
                 </td>
 
+                {/* 📝 SINOPSIS */}
+                <td>
+                  {juego.sinopsis
+                    ? juego.sinopsis.length > 40
+                      ? juego.sinopsis.substring(0, 40) + "..."
+                      : juego.sinopsis
+                    : "Sin sinopsis"}
+                </td>
+
+                {/* ⚙️ ACCIONES */}
                 <td>
                   <button
                     className="btn-editar"
